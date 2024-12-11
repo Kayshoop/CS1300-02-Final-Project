@@ -2,6 +2,7 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: Arial, sans-serif;
+    background-color: black; 
 }
 
 /* structuring Nav Bar */
@@ -11,6 +12,7 @@ nav {
     align-items: center; 
     background-color: black; 
     position: fixed; 
+    max-height: 15%;
     width: 100%; 
     top: 0; 
     z-index: 1000; 
@@ -24,6 +26,14 @@ nav {
 
 .menu button {
     margin: 5%;
+}
+
+.hero { 
+    background-color: blue; /*Can change or update!*/
+    text-align: center;
+    margin-top: 14%;
+    z-index: 500;
+    padding: 5%;
 }
 
 
