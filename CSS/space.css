@@ -1,3 +1,62 @@
 body {
+    background-color: #17202a; 
+}
+
+h1 {
+    color: black;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+}
+
+.leftcolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero { 
+    background-color: #212f3d; 
+}
+
+nav {
     background-color: black;
+}
+
+button {
+    font-weight: bold;
+    background-color: #808b96;
+    color: #17202a;
+}
+
+button:hover {
+    font-weight: bold;
+    background-color: #808b96;
+    color: #abb2b9;
+}
+
+a {
+    font-weight: bold;
+    background-color: #808b96;
+    color: #17202a;
+}
+
+a:hover {
+    font-weight: bold;
+    background-color: #808b96;
+    color: #abb2b9;
+}
+
+.card {
+    background: linear-gradient(#566573, darkgrey);
+    padding: 50px;
+    box-shadow: 2px 2px 5px black;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
