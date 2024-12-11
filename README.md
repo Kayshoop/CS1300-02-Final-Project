@@ -1,4 +1,6 @@
 # CS1300-02-Final-Project
+WeatherAPI - API Key: 34cf0721004440388f1163235241112
+Nasa Open API - API Key: BtqrrK9yfsCvnJMJDLBurTmCT3g4jpucmRoB8SPr
 
 LINK: https://kayshoop.github.io/CS1300-02-Final-Project/
 
