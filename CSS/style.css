@@ -10,7 +10,6 @@ nav {
     justify-content: space-between;
     align-items: center; 
     background-color: black; 
-    padding: 10px; 
     position: fixed; 
     width: 100%; 
     top: 0; 
@@ -26,6 +25,9 @@ nav {
 .menu button {
     margin: 5%;
 }
+
+
+
 
 
 
