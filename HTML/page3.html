@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../CSS/animation.css">
     
     <!--Be sure to link any extra files made-->
-    <script src="/JAVASCRIPT/API.js"></script>
-    <script src="/JAVASCRIPT/script.js"></script>
+    <script src="../JAVASCRIPT/API.js"></script>
+    <script src="../JAVASCRIPT/page3.js"></script>
     
-    <title>Terrestrial Weather</title>
+    <title>Earth Weather</title>
 </head>
 <body>
     <nav class="navBar">
@@ -24,15 +24,23 @@
     </nav>
 
     <div class="hero">
-        <!--This will be where you highlight the page, have fun!-->
+        <h1> Explore Earth's Weather</h1>
+        <p>discover real-time weather updates</p>
     </div>
     
     <div class="content">
         <div class="leftColumn">
-            <!--this will be for content on the page-->
+            <form id="weatherForm">
+                <label for="cityImput">Enter City:</label>
+                <imput type="text" id="cityImput" placeholder="e.g., Chicago">
+                    <button type="submit">Get Weather</button>
+               
+            </form>
         </div>
         <div class="rightColumn">
-            <!--this will be for content on the page-->
+            <H3>Weather Details</H3>
+            <div id="weather"></div>
+            <p>Searchfor weather Details</p>
         </div>
     </div>
 </body>
