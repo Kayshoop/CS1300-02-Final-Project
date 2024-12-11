@@ -28,16 +28,28 @@ nav {
     margin: 5%;
 }
 
+/* designing base hero section */
 .hero { 
     background-color: blue; /*Can change or update!*/
     text-align: center;
-    margin-top: 14%;
+    margin-top: 5%;
     z-index: 500;
     padding: 5%;
 }
 
+/* designing base for column structure */
 
+.content {
+    color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5%;
+    gap: 20px;
+}
 
-
-
-
+.leftColumn, .rightColumn {
+    flex: 1;
+    padding: 10%;
+    box-sizing: border-box;
+}
