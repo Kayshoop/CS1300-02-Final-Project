@@ -19,26 +19,30 @@
             <button id="homeMenuBtn"><a href="index.html">HomePage</a></button>
             <button id="spacePageBtn"><a href="page2.html">Space</a></button>
             <button id="earthPageBtn"><a href="page3.html">Earth</a></button>
-            <button id="searchPageBtn"><a href="page4.html">Current Events</a></button>
+            <button id="searchPageBtn"><a href="page4.html">Astrology</a></button>
         </ul>
     </nav>
 
     <div class="hero">
-        <div class="moonSearchBar">
-            <button class="moonBTN">Moon</button><input type="text" id="dateRange" placeholder="Select Date Range">
-        </div>
+        <h1 class="heroTitle">Find the placement of the planets</h1>
+        <p class="heroDescription">In astrology, the placement of planets at the time of your birth
+            is believed to influence your personality, behavior, and life events!</p>
     </div>
     
     <div class="content">
         <div class="leftColumn">
-            <h1 class="localWeather">Local Events</h1>
-            <br>
-            
+            <div id="astroData"></div>
         </div>
         <div class="rightColumn">
-            <h1 class="astroWeather">Astro Events</h1>
-            <br>
-            
+            <h1 class="astroTitle">Astro Charting</h1>
+            <p>Enter the date and time of your birth, then click the moon to get a personalized astrology reading.</p>
+            <div class="moonSearchBar">
+                <input type="date" id="birthDate" class="pg4Input"> 
+                <input type="time" id="birthTime" class="pg4Input"> 
+                <input type="text" id="birthCity" class="pg4Input" placeholder="City"> 
+                <input type="text" id="birthState" class="pg4Input" placeholder="State">
+                <button onclick="fetchAstrologyData()">View Chart</button>
+            </div>
         </div>
     </div>
 </body>
