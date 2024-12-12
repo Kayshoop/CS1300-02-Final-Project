@@ -1,24 +1,74 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: antiquewhite;
-    margin: 0;
+    background-color: #2e5266; 
+}
+
+h1 {
+    color: #4D7298;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: black;
+}
+
+.rightColumnTitle {
+    color: black;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+}
+
+nav {
+    background-color: #4D7298;
+}
+
+.menu button {
+    font-weight: bold;
+    background-color: #9DC3C2;
+}
+
+button:hover {
+    background-color: #4D7298;
+}
+
+a {
+    color: #2e5266;
+}
+
+a:hover {
+    font-weight: bold;
+    color: #D0EFB1;
+}
+
+.hero { 
+    background-color: #9DC3C2; 
+    text-align: center;
+    margin-top: 5%;
+    z-index: 500;
+    padding: 5%;
+}
+
+.page3rightColumn {
+    background-color: #4D7298; 
+}
+
+.page3leftColumn, .page3rightColumn {
+    flex: 1;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+.card {
+    background: linear-gradient(#77A6B6, #D0EFB1);
+    padding: 50px;
+    box-shadow: 2px 2px 5px black;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-h1{
-    font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 50px;
-}
-
-p{
-    font-size: 1.3rem;
-    margin: 15px 0;
-}
-#weatherForm {
-    margin: 20px;
+    align-items: top;
 }
 
 #cityInput {
@@ -31,50 +81,30 @@ p{
     width: 300px;
 }
 
-button {
-    background-color: rgba(137, 43, 226, 0.475);
-    font-weight: bolder;
-    font-size: 1rem;
-    padding: 10px;
-    color: rgba(0, 0, 255, 0.684);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
 #weatherButton {
-    background-color: rgba(137, 43, 226, 0.475);
+    background-color: #2e5266;
     font-weight: bolder;
     font-size: 1rem;
     padding: 10px;
-    color: rgba(0, 0, 255, 0.684);
+    color: #D0EFB1;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
-#weatherButton button:hover {
-    background-color: rgba(0, 0, 255, 0.43);
-    color: blueviolet;
-  }
-
-  .rightColumn {
-    background: linear-gradient(rgba(0, 0, 255, 0.632), rgba(238, 130, 238, 0.528));
-    padding: 50px;
-    box-shadow: 2px,2px, 5px rgba(0, 0, 0, 0.429);
-    min-width: 300px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.page3RightColumn {
+    background: #4D7298;
+    padding: 25px;
     
   }
 
-.errorDisplay {
+  .errorDisplay {
     font-size: 2rem;
     color: rgba(0, 0, 0, 0.537);
     font-weight: bolder;
 }
+<<<<<<< HEAD
+=======
   
 /* media */
 
@@ -87,3 +117,4 @@ button {
         padding: 5%;
     }
 }
+>>>>>>> 96bb8223e5c8321c91f8d7e7d1ad66ed4495f025

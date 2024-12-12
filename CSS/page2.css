@@ -39,12 +39,6 @@ a:hover {
     color: #A68B78;
 }
 
-.leftcolumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .hero { 
     background-color: #473D3F; 
     text-align: center;
