@@ -58,7 +58,7 @@ a:hover {
     color: #d17a22;
 }
 
-.content {
+.content, .content3 {
     color: #4c061d;
     display: flex;
     flex-direction: row;
@@ -67,17 +67,39 @@ a:hover {
     gap: 20px;
 }
 
-.leftColumn {
+.leftColumn, .leftColumn2 {
     background-color: #d17a22;
 }
 
-.rightColumn {
+.rightColumn, .rightColumn2 {
     background-color: #4c061d;
     color: #d17a22;
 }
 
-.leftColumn, .rightColumn {
+.leftColumn, .rightColumn, .leftColumn2, .rightColumn2 {
     flex: 1;
     padding: 10%;
     box-sizing: border-box;
 }
+
+.content2 {
+    color: #4c061d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    gap: 20px;
+}
+
+.input {
+    background-color: #d17a22;
+    
+}
+
+.input{
+    flex: 1;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+
