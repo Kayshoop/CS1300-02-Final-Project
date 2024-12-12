@@ -46,13 +46,13 @@ fetch(`https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/GST?startDate=${startDate}&
 // adding in astro API
 
 function fetchAstrologyData() {
-    const dateInput = document.getElementById('dateInput').value;
-    const timeInput = document.getElementById('timeInput').value;
+    const dateInput = document.getElementById('birthDate').value;
+    const timeInput = document.getElementById('birthTime').value;
     const dateTime = new Date(`${dateInput}T${timeInput}`);
 
     const year = dateTime.getFullYear();
     const month = dateTime.getMonth() + 1;
-    const day = dateTime.getDay();
+    const day = dateTime.getDate();
     const hours = dateTime.getHours();
     const minutes = dateTime.getMinutes();
     const observation_point = "geocentric";
