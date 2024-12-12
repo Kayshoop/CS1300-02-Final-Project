@@ -43,11 +43,13 @@ fetch(`https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/GST?startDate=${startDate}&
     })
     .catch(error => console.error('Error, Unable to process NASA Data', error));
 
-// adding in astro API
+// adding in astro API - OpenCage Geocoding API
 
 function fetchAstrologyData() {
     const dateInput = document.getElementById('birthDate').value;
     const timeInput = document.getElementById('birthTime').value;
+    const city = document.getElementById('birthCity').value;
+    const state = document.getElementById('birthState').value;
     const dateTime = new Date(`${dateInput}T${timeInput}`);
 
     const year = dateTime.getFullYear();
@@ -55,8 +57,8 @@ function fetchAstrologyData() {
     const day = dateTime.getDate();
     const hours = dateTime.getHours();
     const minutes = dateTime.getMinutes();
-    const observation_point = "geocentric";
-    const language = "en";
+    
+    const geocodeUrl = `https://api.opencagedata.com/geocode/v1/json?q=${city},${state}&key=78ef5e7c837a455291446484d31c3254'
 
     const url = "https://json.freeastrologyapi.com/planets/extended"
     const headers = {
