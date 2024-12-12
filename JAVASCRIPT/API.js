@@ -42,3 +42,45 @@ fetch(`https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/GST?startDate=${startDate}&
         document.getElementById('geomagneticStorms').innerHTML = geomagneticStorms;
     })
     .catch(error => console.error('Error, Unable to process NASA Data', error));
+
+// adding in astro API
+
+function fetchAstrologyData() {
+    const dateInput = document.getElementById('dateInput').value;
+    const timeInput = document.getElementById('timeInput').value;
+    const dateTime = new Date(`${dateInput}T${timeInput}`);
+
+    const year = dateTime.getFullYear();
+    const month = dateTime.getMonth() + 1;
+    const day = dateTime.getDay();
+    const hours = dateTime.getHours();
+    const minutes = dateTime.getMinutes();
+    const observation_point = "geocentric";
+    const language = "en";
+
+    const url = "https://json.freeastrologyapi.com/planets/extended"
+    const headers = {
+        'Content-Type': 'application/json',
+        'x-api-key': 'Sk29NSZ4cf9uG32k39Pnt7QzRvjUEWCKNbiYwbV4'
+    };
+
+    const data = {
+        year: year,
+        month: month,
+        date: day,
+        hours: hours,
+        minutes: minutes,
+        settings: {
+            observation_point: "geocentric",
+            language: "en"
+        }
+    };
+    fetch(url, { 
+        method: 'POST', 
+        headers: headers, 
+        body: JSON.stringify(data) 
+    }) 
+    .then(astroResponse => astroResponse.json()) 
+    .then(data => { document.getElementById('astroData').innerText = JSON.stringify(data, null, 2); }) 
+    .catch(error => console.error('Error:', error));
+}
