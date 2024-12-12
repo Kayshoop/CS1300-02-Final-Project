@@ -19,6 +19,7 @@ weatherForm.addEventListener("submit", async envent => {
         } catch(error) {
             console.error(error);
             displayError(error);
+
         }
 
     } else {displayError("Invalid. Please enter a city")}
@@ -46,6 +47,21 @@ function displayWeatherInfo(data){
     const {name: city, 
         main: {temp, humidity}, 
         weatehr: [{description, id}]} = data
+
+        leftColumn.textContent = "";
+        leftColumn.style.display = "flex";
+
+        const cityDisplay = Document.createElement("h1")
+        const tempDisplay = Document.createElement("p")
+        const humidityDisplay = Document.createElement("p")
+        const descyDisplay = Document.createElement("p")
+        const WeatherEmoji = Document.createElement("p")
+
+        cityDisplay.textContent = city
+
+        cityDisplay.classList.add("cityDisplay");
+
+        leftColumn.appendChild(cityDisplay);
 
 }
 

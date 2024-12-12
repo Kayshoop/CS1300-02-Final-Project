@@ -103,3 +103,18 @@ a:hover {
     color: rgba(0, 0, 0, 0.537);
     font-weight: bolder;
 }
+<<<<<<< HEAD
+=======
+  
+/* media */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .leftColumn, .rightColumn {
+        flex: 1;
+        padding: 5%;
+    }
+}
+>>>>>>> 96bb8223e5c8321c91f8d7e7d1ad66ed4495f025
