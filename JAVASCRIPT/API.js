@@ -58,7 +58,7 @@ function fetchAstrologyData() {
     const hours = dateTime.getHours();
     const minutes = dateTime.getMinutes();
     
-    const geocodeUrl = `https://api.opencagedata.com/geocode/v1/json?q=${city},${state}&key=78ef5e7c837a455291446484d31c3254'
+    const geocodeUrl = "https://api.opencagedata.com/geocode/v1/json?q=${city},${state}&key=78ef5e7c837a455291446484d31c3254";
 
     const url = "https://json.freeastrologyapi.com/planets/extended"
     const headers = {

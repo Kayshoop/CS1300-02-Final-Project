@@ -76,3 +76,14 @@ button {
     font-weight: bolder;
 }
   
+/* media */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .leftColumn, .rightColumn {
+        flex: 1;
+        padding: 5%;
+    }
+}
