@@ -13,31 +13,6 @@ p {
     font-size: 20px;
 }
 
-#geomagneticParagraph {
-    color: #A68B78;
-}
-
-.leftcolumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero { 
-    background-color: #473D3F; 
-    padding: 0;
-}
-
-.content {
-    background-color: #473D3F;
-}
-
-.page2leftColumn, .page2rightColumn {
-    flex: 1;
-    padding: 10%;
-    box-sizing: border-box;
-}
-
 nav {
     background-color: #13181e;
 }
@@ -58,6 +33,34 @@ a {
 a:hover {
     font-weight: bold;
     color: #3A3032;
+}
+
+#geomagneticParagraph {
+    color: #A68B78;
+}
+
+.leftcolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero { 
+    background-color: #473D3F; 
+    text-align: center;
+    margin-top: 5%;
+    z-index: 500;
+    padding: 5%;
+}
+
+.page2rightColumn {
+    background-color: #473D3F; 
+}
+
+.page2leftColumn, .page2rightColumn {
+    flex: 1;
+    padding: 10%;
+    box-sizing: border-box;
 }
 
 .card {

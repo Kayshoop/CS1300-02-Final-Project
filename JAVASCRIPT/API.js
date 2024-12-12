@@ -2,7 +2,7 @@
 
 // linking WeatherAPI - https://www.weatherapi.com/api-explorer.aspx#current
 
-// Fetching daily weather for Tulsa
+/* Fetching daily weather for Tulsa
 fetch('http://api.weatherapi.com/v1/current.json?key=34cf0721004440388f1163235241112&q=Tulsa&aqi=no')
     .then(weatherResponse => weatherResponse.json())
     .then(weatherData => {
@@ -16,10 +16,11 @@ fetch('http://api.weatherapi.com/v1/current.json?key=34cf0721004440388f116323524
         `;
     })
     .catch(error => console.error('Error, Unable to process Weather Data', error));
+*/
 
 /* linking NASA open API for Geomagnetic Storms 
 https://ccmc.gsfc.nasa.gov/tools/DONKI/#donki-webservice-calls-api  
-This link will take you to each API call to fetch different data from the NASA page */
+This link will take you to each API call to fetch different data from the NASA page 
 
 // Fetching geomagnetic storms predicted for the week
 const startDate = '2024-12-11'; // Replace with the current date
@@ -42,47 +43,58 @@ fetch(`https://kauai.ccmc.gsfc.nasa.gov/DONKI/WS/get/GST?startDate=${startDate}&
         document.getElementById('geomagneticStorms').innerHTML = geomagneticStorms;
     })
     .catch(error => console.error('Error, Unable to process NASA Data', error));
+*/
 
 // adding in astro API - OpenCage Geocoding API
 
-function fetchAstrologyData() {
-    const dateInput = document.getElementById('birthDate').value;
-    const timeInput = document.getElementById('birthTime').value;
-    const city = document.getElementById('birthCity').value;
-    const state = document.getElementById('birthState').value;
-    const dateTime = new Date(`${dateInput}T${timeInput}`);
-
-    const year = dateTime.getFullYear();
-    const month = dateTime.getMonth() + 1;
-    const day = dateTime.getDate();
-    const hours = dateTime.getHours();
-    const minutes = dateTime.getMinutes();
+document.addEventListener('DOMContentLoaded', function() {
+    function fetchAstrologyData() {
+        const dateInput = document.getElementById('birthDate').value;
+        const timeInput = document.getElementById('birthTime').value;
+        const city = document.getElementById('birthCity').value;
+        const state = document.getElementById('birthState').value;
+        const dateTime = new Date(`${dateInput}T${timeInput}`);
     
-    const geocodeUrl = "https://api.opencagedata.com/geocode/v1/json?q=${city},${state}&key=78ef5e7c837a455291446484d31c3254";
-
-    const url = "https://json.freeastrologyapi.com/planets/extended"
-    const headers = {
-        'Content-Type': 'application/json',
-        'x-api-key': 'Sk29NSZ4cf9uG32k39Pnt7QzRvjUEWCKNbiYwbV4'
-    };
-
-    const data = {
-        year: year,
-        month: month,
-        date: day,
-        hours: hours,
-        minutes: minutes,
-        settings: {
-            observation_point: "geocentric",
-            language: "en"
-        }
-    };
-    fetch(url, { 
-        method: 'POST', 
-        headers: headers, 
-        body: JSON.stringify(data) 
-    }) 
-    .then(astroResponse => astroResponse.json()) 
-    .then(data => { document.getElementById('astroData').innerText = JSON.stringify(data, null, 2); }) 
-    .catch(error => console.error('Error:', error));
-}
+        const year = dateTime.getFullYear();
+        const month = dateTime.getMonth() + 1;
+        const day = dateTime.getDate();
+        const hours = dateTime.getHours();
+        const minutes = dateTime.getMinutes();
+        
+        const geocodeUrl = `https://api.opencagedata.com/geocode/v1/json?q=${city},${state}&key=78ef5e7c837a455291446484d31c3254`
+    
+        fetch(geocodeUrl)
+            .then(geoResponse => geoResponse.json())
+            .then(geoData => {
+                const location = geoData.results[0].geometry; 
+                const timezone = geoData.results[0].annotations.timezone.offset_sec / 3600;
+    
+                const astroUrl = "https://json.freeastrologyapi.com/planets/extended"
+                const headers = {
+                    'Content-Type': 'application/json',
+                    'x-api-key': 'Sk29NSZ4cf9uG32k39Pnt7QzRvjUEWCKNbiYwbV4'
+                };
+                const data = {
+                    year: year,
+                    month: month,
+                    date: day,
+                    hours: hours,
+                    minutes: minutes,
+                    settings: {
+                        observation_point: "geocentric",
+                        language: "en"
+                    }
+                };
+                fetch(astroUrl, { 
+                    method: 'POST', 
+                    headers: headers, 
+                    body: JSON.stringify(data) 
+                });
+            })
+            .then(astroResponse => astroResponse.json()) 
+            .then(data => { 
+                document.getElementById('astroData').innerText = JSON.stringify(data, null, 2); 
+            }) 
+            .catch(error => console.error('Error:', error));
+    }
+});
