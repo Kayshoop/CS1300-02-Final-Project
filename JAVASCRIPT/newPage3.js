@@ -1,4 +1,20 @@
-//Feel free to change or update, but these are the resources I found!
+const cityInput = document.getElementById("cityInput");
+
+fetch('http://api.weatherapi.com/v1/current.json?key=34cf0721004440388f1163235241112&q=Tulsa&aqi=no')
+    .then(weatherResponse => weatherResponse.json())
+    .then(weatherData => {
+        console.log('Weather Data:', weatherData);
+        // Process and display weather data
+        document.getElementById('weather').innerHTML = `
+            <h2>Current Weather in Tulsa</h2>
+            <p>Temperature: ${weatherData.current.temp_f}°F</p>
+            <p>Condition: ${weatherData.current.condition.text}</p>
+            <img src="${weatherData.current.condition.icon}" alt="Weather Icon">
+        `;
+    })
+    .catch(error => console.error('Error, Unable to process Weather Data', error));
+
+    //Feel free to change or update, but these are the resources I found!
 
 // linking WeatherAPI - https://www.weatherapi.com/api-explorer.aspx#current
 

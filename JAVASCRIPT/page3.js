@@ -1,23 +1,24 @@
 // const
 
-const apikey = "d92c0c9afe5c4117b3e12415241212"
-const weatherForm = document.querySelector(".weatherForm");
-const cityInput = document.querySelector("#cityInput");
-const leftColumn = document.querySelector(".leftColumn");
+const apikey = "d92c0c9afe5c4117b3e12415241212";
+const weatherForm = document.getElementById("weatherForm");
+const cityInput = document.getElementById("cityInput");
+const leftColumn = document.getElementById(".leftColumn");
 
 weatherForm.addEventListener("submit", async envent => {
 
     event.preventDefault();
 
-    const city = cityImput.value;
+    const city = cityInput.value;
 
     if(city){
         try{
+            
             const weatherData = await getWeatherData(city);
             displayWeatherInfo(weatherData);
 
         } catch(error) {
-            console.error(error);
+            console.log(error);
             displayError(error);
 
         }
