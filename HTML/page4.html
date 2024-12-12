@@ -24,20 +24,24 @@
     </nav>
 
     <div class="hero">
+        <h1 class="heroTitle">Find the placement of the planets</h1>
+        <p class="heroDescription">In astrology, the placement of planets at the time of your birth
+            is believed to influence your personality, behavior, and life events!</p>
+        
         <div class="moonSearchBar">
-            <button class="moonBTN">Moon</button><input type="text" id="dateRange" placeholder="Select Date Range">
+            <input type="date" id="birthDate" class="pg4Input"> 
+            <input type="time" id="birthTime" class="pg4Input"> 
+            <button onclick="fetchAstrologyData()">View Chart</button>
         </div>
     </div>
     
     <div class="content">
         <div class="leftColumn">
-            <h1 class="localWeather">Local Events</h1>
-            <br>
+            <!--display the data pulled from API -->
             
         </div>
         <div class="rightColumn">
-            <h1 class="astroWeather">Astro Events</h1>
-            <br>
+            <h1 class="astroTitle">Planet</h1>
             
         </div>
     </div>
