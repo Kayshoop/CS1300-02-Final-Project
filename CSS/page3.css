@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+p{
+    
+}
+#weatherForm {
+    margin: 20px;
+}
+
+#cityImput {
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300;
+}
+
+button {
+    background-color: rgba(137, 43, 226, 0.475);
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 10px;
+    color: rgba(0, 0, 255, 0.684);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#weatherButton {
+    background-color: rgba(137, 43, 226, 0.475);
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 10px;
+    color: rgba(0, 0, 255, 0.684);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#weatherButton button:hover {
+    background-color: rgba(0, 0, 255, 0.43);
+    color: blueviolet;
+  }
+
+  .rightColumn {
+    background: linear-gradient(rgba(0, 0, 255, 0.632), rgba(238, 130, 238, 0.528));
+    padding: 50px;
+    box-shadow: 2px,2px, 5px rgba(0, 0, 0, 0.429);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+
+  
