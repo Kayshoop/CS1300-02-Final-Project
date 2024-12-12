@@ -21,25 +21,24 @@ p {
 
 .hero { 
     background-color: #212f3d; 
+    padding: 0;
+}
+
+.content {
+    background-color: #212f3d;
+}
+
+.page2leftColumn, .page2rightColumn {
+    flex: 1;
+    padding: 10%;
+    box-sizing: border-box;
 }
 
 nav {
     background-color: black;
 }
 
-button {
-    font-weight: bold;
-    background-color: #808b96;
-    color: #17202a;
-}
-
-button:hover {
-    font-weight: bold;
-    background-color: #808b96;
-    color: #abb2b9;
-}
-
-a {
+.menu button {
     font-weight: bold;
     background-color: #808b96;
     color: #17202a;

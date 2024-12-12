@@ -2,7 +2,7 @@ body {
     margin: 0; 
     padding: 0; 
     font-family: Arial, sans-serif;
-    background-color: black; 
+    background-color: #b4c292; 
 }
 
 /* structuring Nav Bar */
@@ -10,7 +10,7 @@ nav {
     display: flex; 
     justify-content: space-between;
     align-items: center; 
-    background-color: black; 
+    background-color: #736f4e; 
     position: fixed; 
     max-height: 15%;
     width: 100%; 
@@ -26,11 +26,22 @@ nav {
 
 .menu button {
     margin: 5%;
+    background-color: #d17a22;
+    color: #4c061d;
+}
+
+a {
+    font-weight: bold;
+    color: #4c061d;
+}
+
+a:hover {
+    color: white;
 }
 
 /* designing base hero section */
 .hero { 
-    background-color: blue; /*Can change or update!*/
+    background-color: #3b3923; /*Can change or update!*/
     text-align: center;
     margin-top: 5%;
     z-index: 500;
@@ -39,13 +50,30 @@ nav {
 
 /* designing base for column structure */
 
+#heroTitle {
+    color: #d17a22;
+}
+
+#heroArticle {
+    color: #d17a22;
+}
+
 .content {
-    color: blueviolet;
+    color: #4c061d;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin: 5%;
     gap: 20px;
+}
+
+.leftColumn {
+    background-color: #d17a22;
+}
+
+.rightColumn {
+    background-color: #4c061d;
+    color: #d17a22;
 }
 
 .leftColumn, .rightColumn {
