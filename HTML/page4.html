@@ -27,22 +27,20 @@
         <h1 class="heroTitle">Find the placement of the planets</h1>
         <p class="heroDescription">In astrology, the placement of planets at the time of your birth
             is believed to influence your personality, behavior, and life events!</p>
-        
-        <div class="moonSearchBar">
-            <input type="date" id="birthDate" class="pg4Input"> 
-            <input type="time" id="birthTime" class="pg4Input"> 
-            <button onclick="fetchAstrologyData()">View Chart</button>
-        </div>
     </div>
     
     <div class="content">
         <div class="leftColumn">
-            <!--display the data pulled from API -->
-            
+            <div id="astroData"></div>
         </div>
         <div class="rightColumn">
-            <h1 class="astroTitle">Planet</h1>
-            
+            <h1 class="astroTitle">Astro Charting</h1>
+            <p>Enter the date and time of your birth, then click the moon to get a personalized astrology reading.</p>
+            <div class="moonSearchBar">
+                <input type="date" id="birthDate" class="pg4Input"> 
+                <input type="time" id="birthTime" class="pg4Input"> 
+                <button onclick="fetchAstrologyData()">View Chart</button>
+            </div>
         </div>
     </div>
 </body>
