@@ -1,3 +1,4 @@
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 const apiUrl = 'https://www.astropix.org/link/mgv?format=json';
 
 function fetchImageMetadata() {
