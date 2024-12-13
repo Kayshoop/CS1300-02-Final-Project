@@ -8,7 +8,7 @@ body {
 
 
 nav {
-    background-color: #aa78d95d; 
+    background-color: #3100a5; 
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,9 @@ a:hover {
 }
 
 .hero {
-    background-color: #9DC3C2; 
+    background-image: url('../CSS/headerImages/astroPage.jpg'); 
+    background-size: cover; 
+    background-position: center;
     text-align: center;
     padding: 50px 20px;
     margin-top: 50px;
@@ -45,13 +47,13 @@ a:hover {
 }
 
 .heroTitle {
-    color: #4D7298;
+    color: #4d00a5;
     font-size: 2.5rem;
     margin: 0;
 }
 
 .heroDescription {
-    color: #2e5266;
+    color: #8138f7;
     font-size: 1.2rem;
     margin-top: 10px;
 }
@@ -80,11 +82,12 @@ a:hover {
 
 .columnDataDisplay h1 {
     font-size: 1.8rem;
-    color: #4D7298;
+    color: #4d00a5;
     margin-bottom: 20px;
 }
 
 .columnDataDisplay p {
+    color: #8138f7;
     font-size: 1.3rem;
     margin: 10px 0;
 }
@@ -92,7 +95,7 @@ a:hover {
 input#cityInput {
     padding: 10px;
     font-size: 1rem;
-    border: 2px solid #4D7298;
+    border: 2px solid #8138f7;
     border-radius: 5px;
     margin: 10px 0;
     width: 95%;
@@ -122,11 +125,12 @@ button#fetchMoonPhaseBtn:hover {
 
 .rightColumn h1 {
     font-size: 1.8rem;
-    color: #D0EFB1;
+    color: #4d00a5;
     margin-bottom: 15px;
 }
 
 .rightColumn p {
+    color: #6616e7;
     font-size: 1.4rem;
     margin: 10px 0;
 }
