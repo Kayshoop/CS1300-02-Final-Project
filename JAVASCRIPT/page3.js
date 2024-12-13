@@ -58,34 +58,50 @@ function displayWeatherInfo(data){
         const tempDisplay = document.createElement("p")
         const humidityDisplay = document.createElement("p")
         const descDisplay = document.createElement("p")
-        const WeatherEmoji = document.createElement("p")
+        const weatherEmojiDisplay = document.createElement("p");
 
         cityDisplay.textContent = city;
         tempDisplay.textContent = `Temperature: ${temp}°F`;
         humidityDisplay.textContent = `Humidity: ${humidity}%`;
         descDisplay.textContent = `Condition: ${description}`;
-        // weatherIcon.src = icon;
-        // weatherIcon.alt = description;
+        weatherEmojiDisplay.textContent = `Weather: ${getWeatherEmoji(description)}`;
+
       
 
         cityDisplay.classList.add("cityDisplay");
         tempDisplay.classList.add("tempDisplay");
         humidityDisplay.classList.add("humidityDisplay");
         descDisplay.classList.add("descDisplay");
-        // weatherIcon.classList.add("weatherEmoji");
+        weatherEmojiDisplay.classList.add("weatherEmoji");
       
 
         card.appendChild(cityDisplay);
         card.appendChild(tempDisplay);
         card.appendChild(humidityDisplay);
         card.appendChild(descDisplay);
-        // card.appendChild(weatherIcon);
+        card.appendChild(weatherEmojiDisplay); 
 
 }
 
-function getWeatherEmoji(weatherID){
+function getWeatherEmoji(description) {
+    const weatherEmojiMap = {
+        Sunny: "☀️",
+        Clear: "🌞",
+        Cloudy: "☁️",
+        Overcast: "🌥️",
+        Rain: "🌧️",
+        Snow: "❄️",
+        Thunderstorm: "⛈️",
+        Fog: "🌫️",
+        Mist: "🌁",
+        Drizzle: "🌦️",
+        Haze: "🌤️",
+        "Partly cloudy": "⛅",
+    };
 
+    return weatherEmojiMap[description] || "🌈";
 }
+
 
 function displayError(message){
 
@@ -94,7 +110,6 @@ function displayError(message){
     errorDisplay.classList.add("errorDisplay");
 
     card.textContent = "";
-    // card.style.display = "flex";
     card.appendChild(errorDisplay)
 
 }

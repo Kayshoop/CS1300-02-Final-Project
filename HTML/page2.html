@@ -11,7 +11,7 @@
     <!--Be sure to link any extra files made-->
     <script src="../JAVASCRIPT/API.js"></script>
     <script src="../JAVASCRIPT/page2API.js"></script>
-    <script src="../JAVASCRIPT/script.js"></script>
+    <!-- <script src="../JAVASCRIPT/script.js"></script> -->
     
     <title>Terrestrial Weather</title>
 </head>
@@ -26,16 +26,16 @@
     </nav>
 
     <div class="hero">
-        <h1 id="heroTitle">Space Photo Generator </h1>
-        <p id="heroArticle">Generate random space photos!
-        </p>
+        <h1 id="heroTitle">Space Photo Image of the Day! </h1>
+        <p id="heroArticle">Generate a different space photo every day!</p>
     </div>
     
     <div class="content">
-        <div class="page2leftColumn">
-            <button id="image-container">Daily Image!</button>
-            <div id="image-container"></div>
+        <div class="generatorButton">
+        <button id="generator" onclick="getImage()">Generate Image!</button>
         </div>
+        <div class="page2leftColumn">
+        <div id="imageContainer"></div>
         <div class="page2rightColumn">
             <h1 id="geomagneticTitle">10 fun facts about space!</h1>
             <p id="funFact1">1. One million Earths could fit inside the Sun – and the Sun is considered an average-size star.</p>
