@@ -3,13 +3,13 @@ body {
 }
 
 h1 {
-    color: #C2A788;
+    color: #e78310;
     margin-top: 0;
     margin-bottom: 25px;
 }
 
 p {
-    color: #C2A788;
+    color: #e69233;
     font-size: 20px;
 }
 
@@ -45,6 +45,13 @@ a:hover {
     padding: 5%;
 }
 
+#heroTitle {
+    color:#e78310;
+}
+#heroArticle {
+    color:#e69233;
+}
+
 .page2rightColumn {
     background-color: #473D3F; 
 }
@@ -70,10 +77,10 @@ img {
     font-size: 50px;
     background-color: #1D2229; 
     color: #C2A788; 
-    border: 2px solid #C2A788;
+    border: 2px solid #e69233;
  }
 
  #generator:hover {
-    background-color: #C2A788;
+    background-color: #e69233;
     color: #1D2229;
  }
