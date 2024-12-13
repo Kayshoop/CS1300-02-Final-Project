@@ -9,7 +9,7 @@ h1 {
 }
 
 p {
-    color: black;
+    color: #C2A788;
     font-size: 20px;
 }
 
@@ -43,10 +43,6 @@ a:hover {
     padding: 5%;
 }
 
-#funFact1, #funFact2, #funFact3, #funFact4, #funFact5, #funFact6, #funFact7, #funFact8, #funFact9, #funFact10{
-    color: #C2A788;
-}
-
 .page2rightColumn {
     background-color: #473D3F; 
     color: white;
@@ -67,3 +63,9 @@ a:hover {
     flex-direction: column;
     align-items: top;
 }
+
+img { 
+    max-width: 100%;
+    height: auto; 
+    border: 2px;
+ }
