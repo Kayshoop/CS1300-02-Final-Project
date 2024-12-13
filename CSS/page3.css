@@ -103,6 +103,36 @@ a:hover {
     color: rgba(0, 0, 0, 0.537);
     font-weight: bolder;
 }
+
+/* for now */
+
+.cityDisplay, .tempDisplay{
+    font-size: 4rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.601);
+    margin-bottom: 30px;
+}
+
+.huidityDisplay{
+    font-weight: bolder;
+}
+
+.descDisplay{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.weatherEmoji{
+    margin: 0;
+    font-size: 6rem;
+}
+
+.errorDisplay{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.514);
+}
   
 /* media */
 

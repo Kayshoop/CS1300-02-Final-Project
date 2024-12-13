@@ -3,7 +3,9 @@
 const apikey = "d92c0c9afe5c4117b3e12415241212";
 const weatherForm = document.getElementById("weatherForm");
 const cityInput = document.getElementById("cityInput");
-const leftColumn = document.getElementById(".leftColumn");
+// const leftColumn = document.getElementById("leftColumn");
+const card = document.querySelector(".card");
+
 
 weatherForm.addEventListener("submit", async envent => {
 
@@ -18,7 +20,7 @@ weatherForm.addEventListener("submit", async envent => {
             displayWeatherInfo(weatherData);
 
         } catch(error) {
-            console.log(error);
+            console.error(error);
             displayError(error);
 
         }
@@ -45,24 +47,39 @@ async function getWeatherData(city) {
 
 function displayWeatherInfo(data){
 
-    const {name: city, 
-        main: {temp, humidity}, 
-        weatehr: [{description, id}]} = data
+    const {
+        location: { name: city },
+        current: { temp_f: temp, humidity, condition: { text: description, icon } }
+      } = data;
+    
+      card.textContent = "";
 
-        leftColumn.textContent = "";
-        leftColumn.style.display = "flex";
+        const cityDisplay = document.createElement("h1")
+        const tempDisplay = document.createElement("p")
+        const humidityDisplay = document.createElement("p")
+        const descDisplay = document.createElement("p")
+        const WeatherEmoji = document.createElement("p")
 
-        const cityDisplay = Document.createElement("h1")
-        const tempDisplay = Document.createElement("p")
-        const humidityDisplay = Document.createElement("p")
-        const descyDisplay = Document.createElement("p")
-        const WeatherEmoji = Document.createElement("p")
-
-        cityDisplay.textContent = city
+        cityDisplay.textContent = city;
+        tempDisplay.textContent = `Temperature: ${temp}°F`;
+        humidityDisplay.textContent = `Humidity: ${humidity}%`;
+        descDisplay.textContent = `Condition: ${description}`;
+        // weatherIcon.src = icon;
+        // weatherIcon.alt = description;
+      
 
         cityDisplay.classList.add("cityDisplay");
+        tempDisplay.classList.add("tempDisplay");
+        humidityDisplay.classList.add("humidityDisplay");
+        descDisplay.classList.add("descDisplay");
+        // weatherIcon.classList.add("weatherEmoji");
+      
 
-        leftColumn.appendChild(cityDisplay);
+        card.appendChild(cityDisplay);
+        card.appendChild(tempDisplay);
+        card.appendChild(humidityDisplay);
+        card.appendChild(descDisplay);
+        // card.appendChild(weatherIcon);
 
 }
 
@@ -76,8 +93,8 @@ function displayError(message){
     errorDisplay.textContent = message;
     errorDisplay.classList.add("errorDisplay");
 
-    leftColumn.textContent = "";
-    leftColumn.style.display = "flex";
-    leftColumn.appendChild(errorDisplay)
+    card.textContent = "";
+    // card.style.display = "flex";
+    card.appendChild(errorDisplay)
 
 }
