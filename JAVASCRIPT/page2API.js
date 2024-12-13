@@ -1,6 +1,6 @@
 function fetchImage() {
-    const apiKey = 'Lwe2jmOhwaFr4obxIPp7VXWhcAgYv5PcVN07cQ08';
-    fetch("https://www.astropix.org/link/mgv?format=json", {
+    const apiKey = 'H9y4EjyMCZ6uEVoAlsB2hxLXAu3QU64V60qLSwwG';
+    fetch("https://api.nasa.gov/planetary/apod?api_key=H9y4EjyMCZ6uEVoAlsB2hxLXAu3QU64V60qLSwwG&count=15", {
         method: "GET",
         headers: {
             'x-api-key' : apiKey,
