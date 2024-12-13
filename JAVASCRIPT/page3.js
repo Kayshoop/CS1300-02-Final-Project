@@ -94,7 +94,6 @@ function displayError(message){
     errorDisplay.classList.add("errorDisplay");
 
     card.textContent = "";
-    // card.style.display = "flex";
     card.appendChild(errorDisplay)
 
 }
