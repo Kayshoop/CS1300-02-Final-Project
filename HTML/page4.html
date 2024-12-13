@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Be sure to link any extra files made-->
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/page4.css">
     <link rel="stylesheet" href="../CSS/animation.css">
-
-    <!--Be sure to link any extra files made-->
-    <script src="/JAVASCRIPT/API.js"></script>
-    <script src="/JAVASCRIPT/script.js"></script>
 
     <title>Terrestrial Weather</title>
 </head>
@@ -24,26 +21,25 @@
     </nav>
 
     <div class="hero">
-        <h1 class="heroTitle">Find the placement of the planets</h1>
-        <p class="heroDescription">In astrology, the placement of planets at the time of your birth
-            is believed to influence your personality, behavior, and life events!</p>
+        <h1 class="heroTitle">The Moon</h1>
+        <p class="heroDescription">View photos of earths closest companion.</p>
     </div>
     
     <div class="content">
         <div class="leftColumn">
-            <div id="astroData"></div>
+            <button class="prevBTN" onclick="prevImage()">Last</button>
+            <div id="imgDisplay"></div>
+            <button class="nextBTN" onclick="nextImage()">Next</button>
         </div>
         <div class="rightColumn">
-            <h1 class="astroTitle">Astro Charting</h1>
-            <p>Enter the date and time of your birth, then click the moon to get a personalized astrology reading.</p>
-            <div class="moonSearchBar">
-                <input type="date" id="birthDate" class="pg4Input"> 
-                <input type="time" id="birthTime" class="pg4Input"> 
-                <input type="text" id="birthCity" class="pg4Input" placeholder="City"> 
-                <input type="text" id="birthState" class="pg4Input" placeholder="State">
-                <button onclick="fetchAstrologyData()">View Chart</button>
-            </div>
+            <h1>Moon Mosaics</h1>
+            <p>detailed photographic compositions of the Moon's surface, created by stitching together
+                 multiple high-resolution images. These mosaics provide a comprehensive view of the lunar landscape, 
+                 capturing intricate details that might not be visible in a single photograph.</p>
         </div>
     </div>
+
+    <!--Be sure to link any extra files made-->
+    <script src="/JAVASCRIPT/page4API.js"></script>
 </body>
 </html>
