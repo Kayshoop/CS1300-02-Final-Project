@@ -17,7 +17,7 @@ nav {
     background-color: #13181e;
 }
 
-.menu button {
+.menu button{
     font-weight: bold;
     background-color: #3A3032;
 }
@@ -45,7 +45,6 @@ a:hover {
 
 .page2rightColumn {
     background-color: #473D3F; 
-    color: white;
 }
 
 .page2leftColumn, .page2rightColumn {
@@ -54,18 +53,25 @@ a:hover {
     box-sizing: border-box;
 }
 
-.card {
-    background: linear-gradient(#3A3032, #A68B78);
-    padding: 50px;
-    box-shadow: 2px 2px 5px black;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: top;
-}
-
 img { 
     max-width: 100%;
     height: auto; 
     border: 2px;
+ }
+
+ #generator {
+    display: block; 
+    margin: 0 auto; 
+    align-items: center;
+    padding: 5%;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: #1D2229; 
+    color: #C2A788; 
+    border: 2px solid #C2A788;
+ }
+
+ #generator:hover {
+    background-color: #C2A788;
+    color: #1D2229;
  }

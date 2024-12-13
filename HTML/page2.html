@@ -26,14 +26,15 @@
     </nav>
 
     <div class="hero">
-        <h1 id="heroTitle">Space Photo Generator </h1>
-        <p id="heroArticle">Generate random space photos!
-        </p>
+        <h1 id="heroTitle">Space Photo Image of the Day! </h1>
+        <p id="heroArticle">Generate a different space photo every day!</p>
     </div>
     
     <div class="content">
+        <div class="generatorButton">
+        <button id="generator" onclick="getImage()">Generate Image!</button>
+        </div>
         <div class="page2leftColumn">
-        <button onclick="getImage()">Generate Image!</button>
         <div id="imageContainer"></div>
         <div class="page2rightColumn">
             <h1 id="geomagneticTitle">10 fun facts about space!</h1>
