@@ -1,5 +1,5 @@
 # CS1300-02-Final-Project
-LINK: https://kayshoop.github.io/CS1300-02-Final-Project/
+LINK: https://kayshoop.github.io/CS1300-02-Final-Project/HTML/
 
 ## DESCRIPTION: 
 
