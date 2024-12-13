@@ -86,8 +86,8 @@ function displayWeatherInfo(data){
 function getWeatherEmoji(description) {
     const weatherEmojiMap = {
         Sunny: "☀️",
-        Clear: "🌞",
         Cloudy: "☁️",
+        Clear: "🌞",
         Overcast: "🌥️",
         Rain: "🌧️",
         Snow: "❄️",
