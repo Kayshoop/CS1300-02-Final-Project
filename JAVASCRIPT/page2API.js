@@ -20,39 +20,33 @@
 //   const button = document.getElementById("fetch-image-button");
 //   button.addEventListener("click", fetchImage);
 
-const apiKey = 'H9y4EjyMCZ6uEVoAlsB2hxLXAu3QU64V60qLSwwG'; // Replace with your actual API key
-    const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=H9y4EjyMCZ6uEVoAlsB2hxLXAu3QU64V60qLSwwG&count=15'; // Replace with your actual API endpoint
+const apiKey = 'H9y4EjyMCZ6uEVoAlsB2hxLXAu3QU64V60qLSwwG'; 
+const apiUrl = 'https://api.nasa.gov/planetary/apod';
 
     async function getImage() {
       try {
-        const response = await fetch(`${apiUrl}?key=${apiKey}`);
+        const response = await fetch(`${apiUrl}?api_key=${apiKey}`, {
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
 
         if (!response.ok) {
-          throw new Error(`Network response was not ok (${response.status})`);
+          throw new error(`Network response was not ok (${response.status})`);
         }
 
         const data = await response.json();
 
-        if (!data || !data.imageUrl) {
+        if (!data || !data.url) {
           throw new Error("Invalid response data from API.");
         }
 
         const imageContainer = document.getElementById('imageContainer');
-        imageContainer.innerHTML = `<img src="${data.imageUrl}" alt="Called Image" onload="imageLoaded()" onerror="imageError()">`; 
+        imageContainer.innerHTML = `<img src="${data.url}" alt="Called Image">`; 
 
       } catch (error) {
-        console.error('Error fetching image:', error);
+        // console.error('Error fetching image:', error);
         const imageContainer = document.getElementById('imageContainer');
         imageContainer.innerHTML = `<p>Error loading image: ${error.message}</p>`;
       }
-    }
-
-    function imageLoaded() {
-      console.log("Image loaded successfully!");
-    }
-
-    function imageError() {
-      console.error("Image failed to load.");
-      // You can add more specific error handling here, 
-      // such as displaying an alternative image or a different error message.
     }
