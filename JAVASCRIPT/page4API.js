@@ -45,7 +45,32 @@ function fetchMoonPhase(lat, lng) {
         .then(response => response.json())
         .then(data => {
             const moonPhase = data.data[0].moonPhase.current.text;
-            document.getElementById('moonPhaseEmoji').textContent = moonPhase;
+            const moonrise = data.data[0].moonrise;
+            const moonset = data.data[0].moonset;
+            const closestMoonPhase = data.data[0].moonPhase.closest.text;
+            const moonFraction = data.data[0].moonFraction;
+            const astronomicalDawn = data.data[0].astronomicalDawn;
+            const astronomicalDusk = data.data[0].astronomicalDusk;
+            const civilDawn = data.data[0].civilDawn;
+            const civilDusk = data.data[0].civilDusk;
+            const nauticalDawn = data.data[0].nauticalDawn;
+            const nauticalDusk = data.data[0].nauticalDusk;
+            const sunrise = data.data[0].sunrise;
+            const sunset = data.data[0].sunset;
+
+            document.getElementById('moonPhaseEmoji').textContent = `Moon Phase: ${moonPhase}`;
+            document.getElementById('moonrise').textContent = `Moonrise: ${moonrise}`;
+            document.getElementById('moonset').textContent = `Moonset: ${moonset}`;
+            document.getElementById('closestMoonPhase').textContent = `Closest Moon Phase: ${closestMoonPhase}`;
+            document.getElementById('moonFraction').textContent = `Moon Fraction: ${moonFraction}`;
+            document.getElementById('astronomicalDawn').textContent = `Astronomical Dawn: ${astronomicalDawn}`;
+            document.getElementById('astronomicalDusk').textContent = `Astronomical Dusk: ${astronomicalDusk}`;
+            document.getElementById('civilDawn').textContent = `Civil Dawn: ${civilDawn}`;
+            document.getElementById('civilDusk').textContent = `Civil Dusk: ${civilDusk}`;
+            document.getElementById('nauticalDawn').textContent = `Nautical Dawn: ${nauticalDawn}`;
+            document.getElementById('nauticalDusk').textContent = `Nautical Dusk: ${nauticalDusk}`;
+            document.getElementById('sunrise').textContent = `Sunrise: ${sunrise}`;
+            document.getElementById('sunset').textContent = `Sunset: ${sunset}`;
         })
         .catch(error => console.error('Error fetching data:', error));
 }
