@@ -36,7 +36,9 @@ a:hover {
 }
 
 .hero { 
-    background-color: #473D3F; 
+    background-image: url('../CSS/headerImages/spacePage.jpg'); 
+    background-size: cover; 
+    background-position: center;
     text-align: center;
     margin-top: 5%;
     z-index: 500;
