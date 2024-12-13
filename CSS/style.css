@@ -39,6 +39,16 @@ a:hover {
     color: white;
 }
 
+img {
+    display: block;
+    margin: 20px auto; 
+    margin-top: 20%;
+    max-width: 90%; 
+    height: auto; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+}
+
 /* designing base hero section */
 .hero { 
     background-color: #3b3923; /*Can change or update!*/
@@ -79,4 +89,18 @@ a:hover {
     flex: 1;
     padding: 10%;
     box-sizing: border-box;
+}
+
+/* media */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    img {
+        max-width: 100%;
+    }
+    .page3leftColumn, .page3rightColumn {
+        padding: 5%;
+    }
 }
