@@ -103,8 +103,36 @@ a:hover {
     color: rgba(0, 0, 0, 0.537);
     font-weight: bolder;
 }
-<<<<<<< HEAD
-=======
+
+/* for now */
+
+.cityDisplay, .tempDisplay{
+    font-size: 4rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.601);
+    margin-bottom: 30px;
+}
+
+.huidityDisplay{
+    font-weight: bolder;
+}
+
+.descDisplay{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.weatherEmoji{
+    margin: 0;
+    font-size: 6rem;
+}
+
+.errorDisplay{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.514);
+}
   
 /* media */
 
@@ -117,4 +145,3 @@ a:hover {
         padding: 5%;
     }
 }
->>>>>>> 96bb8223e5c8321c91f8d7e7d1ad66ed4495f025

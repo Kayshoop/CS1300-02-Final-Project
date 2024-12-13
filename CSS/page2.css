@@ -35,10 +35,6 @@ a:hover {
     color: #3A3032;
 }
 
-#geomagneticParagraph {
-    color: #A68B78;
-}
-
 .hero { 
     background-color: #473D3F; 
     text-align: center;
@@ -47,8 +43,13 @@ a:hover {
     padding: 5%;
 }
 
+#funFact1, #funFact2, #funFact3, #funFact4, #funFact5, #funFact6, #funFact7, #funFact8, #funFact9, #funFact10{
+    color: #C2A788;
+}
+
 .page2rightColumn {
     background-color: #473D3F; 
+    color: white;
 }
 
 .page2leftColumn, .page2rightColumn {
